@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
-import { ShoppingCart } from 'lucide-react';
+// import { ShoppingCart } from 'lucide-react';
+import Cart from "./Cart";
 //import { useCartStore } from "@/sotre";
 
 function Navbar() {
@@ -15,12 +16,7 @@ function Navbar() {
         Next Store
       </Link>
       <div className="flex items-center gap-8">
-        <div className="flex items-center cursor-pointer relative">
-          <ShoppingCart />
-          <span className="bg-teal-600 text-sm font-bold rounded-full h-5 w-5 flex items-center justify-center absolute left-3 bottom-3">
-            2
-          </span>
-        </div>
+        <Cart/>
         <div>
           <SignedIn>
             <UserButton />
