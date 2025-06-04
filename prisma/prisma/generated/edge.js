@@ -179,7 +179,7 @@ const config = {
   },
   "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\n// Define database connection via the `DATABASE_URL` env var\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\n// Define custom output path for generated Prisma Client\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"./prisma/generated\"\n}\n\n// Example data model\nmodel User {\n  id         Int      @id @default(autoincrement())\n  externalID String   @unique\n  attributes Json\n  createdAt  DateTime @default(now())\n  email      String   @unique\n  name       String?\n}\n",
   "inlineSchemaHash": "8abc5171ac83cf3e3b26de24804be3ae2db861d46931f1dbce8215d8e2162e64",
-  "copyEngine": false
+  "copyEngine": true
 }
 config.dirname = '/'
 
