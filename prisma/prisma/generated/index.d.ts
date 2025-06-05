@@ -893,16 +893,20 @@ export namespace Prisma {
     id: number | null
     externalID: string | null
     createdAt: Date | null
+    updatedAt: Date | null
     email: string | null
     name: string | null
+    stripeCustomerID: string | null
   }
 
   export type UserMaxAggregateOutputType = {
     id: number | null
     externalID: string | null
     createdAt: Date | null
+    updatedAt: Date | null
     email: string | null
     name: string | null
+    stripeCustomerID: string | null
   }
 
   export type UserCountAggregateOutputType = {
@@ -910,8 +914,10 @@ export namespace Prisma {
     externalID: number
     attributes: number
     createdAt: number
+    updatedAt: number
     email: number
     name: number
+    stripeCustomerID: number
     _all: number
   }
 
@@ -928,16 +934,20 @@ export namespace Prisma {
     id?: true
     externalID?: true
     createdAt?: true
+    updatedAt?: true
     email?: true
     name?: true
+    stripeCustomerID?: true
   }
 
   export type UserMaxAggregateInputType = {
     id?: true
     externalID?: true
     createdAt?: true
+    updatedAt?: true
     email?: true
     name?: true
+    stripeCustomerID?: true
   }
 
   export type UserCountAggregateInputType = {
@@ -945,8 +955,10 @@ export namespace Prisma {
     externalID?: true
     attributes?: true
     createdAt?: true
+    updatedAt?: true
     email?: true
     name?: true
+    stripeCustomerID?: true
     _all?: true
   }
 
@@ -1041,8 +1053,10 @@ export namespace Prisma {
     externalID: string
     attributes: JsonValue
     createdAt: Date
+    updatedAt: Date
     email: string
     name: string | null
+    stripeCustomerID: string | null
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
     _sum: UserSumAggregateOutputType | null
@@ -1069,8 +1083,10 @@ export namespace Prisma {
     externalID?: boolean
     attributes?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
     email?: boolean
     name?: boolean
+    stripeCustomerID?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1078,8 +1094,10 @@ export namespace Prisma {
     externalID?: boolean
     attributes?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
     email?: boolean
     name?: boolean
+    stripeCustomerID?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
@@ -1087,8 +1105,10 @@ export namespace Prisma {
     externalID?: boolean
     attributes?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
     email?: boolean
     name?: boolean
+    stripeCustomerID?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
@@ -1096,11 +1116,13 @@ export namespace Prisma {
     externalID?: boolean
     attributes?: boolean
     createdAt?: boolean
+    updatedAt?: boolean
     email?: boolean
     name?: boolean
+    stripeCustomerID?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "externalID" | "attributes" | "createdAt" | "email" | "name", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "externalID" | "attributes" | "createdAt" | "updatedAt" | "email" | "name" | "stripeCustomerID", ExtArgs["result"]["user"]>
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -1110,8 +1132,10 @@ export namespace Prisma {
       externalID: string
       attributes: Prisma.JsonValue
       createdAt: Date
+      updatedAt: Date
       email: string
       name: string | null
+      stripeCustomerID: string | null
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1539,8 +1563,10 @@ export namespace Prisma {
     readonly externalID: FieldRef<"User", 'String'>
     readonly attributes: FieldRef<"User", 'Json'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly updatedAt: FieldRef<"User", 'DateTime'>
     readonly email: FieldRef<"User", 'String'>
     readonly name: FieldRef<"User", 'String'>
+    readonly stripeCustomerID: FieldRef<"User", 'String'>
   }
     
 
@@ -1926,8 +1952,10 @@ export namespace Prisma {
     externalID: 'externalID',
     attributes: 'attributes',
     createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
     email: 'email',
-    name: 'name'
+    name: 'name',
+    stripeCustomerID: 'stripeCustomerID'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -2059,8 +2087,10 @@ export namespace Prisma {
     externalID?: StringFilter<"User"> | string
     attributes?: JsonFilter<"User">
     createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
     email?: StringFilter<"User"> | string
     name?: StringNullableFilter<"User"> | string | null
+    stripeCustomerID?: StringNullableFilter<"User"> | string | null
   }
 
   export type UserOrderByWithRelationInput = {
@@ -2068,8 +2098,10 @@ export namespace Prisma {
     externalID?: SortOrder
     attributes?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     email?: SortOrder
     name?: SortOrderInput | SortOrder
+    stripeCustomerID?: SortOrderInput | SortOrder
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -2081,7 +2113,9 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     attributes?: JsonFilter<"User">
     createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
     name?: StringNullableFilter<"User"> | string | null
+    stripeCustomerID?: StringNullableFilter<"User"> | string | null
   }, "id" | "externalID" | "email">
 
   export type UserOrderByWithAggregationInput = {
@@ -2089,8 +2123,10 @@ export namespace Prisma {
     externalID?: SortOrder
     attributes?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     email?: SortOrder
     name?: SortOrderInput | SortOrder
+    stripeCustomerID?: SortOrderInput | SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -2106,16 +2142,20 @@ export namespace Prisma {
     externalID?: StringWithAggregatesFilter<"User"> | string
     attributes?: JsonWithAggregatesFilter<"User">
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     email?: StringWithAggregatesFilter<"User"> | string
     name?: StringNullableWithAggregatesFilter<"User"> | string | null
+    stripeCustomerID?: StringNullableWithAggregatesFilter<"User"> | string | null
   }
 
   export type UserCreateInput = {
     externalID: string
     attributes: JsonNullValueInput | InputJsonValue
     createdAt?: Date | string
+    updatedAt?: Date | string
     email: string
     name?: string | null
+    stripeCustomerID?: string | null
   }
 
   export type UserUncheckedCreateInput = {
@@ -2123,16 +2163,20 @@ export namespace Prisma {
     externalID: string
     attributes: JsonNullValueInput | InputJsonValue
     createdAt?: Date | string
+    updatedAt?: Date | string
     email: string
     name?: string | null
+    stripeCustomerID?: string | null
   }
 
   export type UserUpdateInput = {
     externalID?: StringFieldUpdateOperationsInput | string
     attributes?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    stripeCustomerID?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateInput = {
@@ -2140,8 +2184,10 @@ export namespace Prisma {
     externalID?: StringFieldUpdateOperationsInput | string
     attributes?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    stripeCustomerID?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserCreateManyInput = {
@@ -2149,16 +2195,20 @@ export namespace Prisma {
     externalID: string
     attributes: JsonNullValueInput | InputJsonValue
     createdAt?: Date | string
+    updatedAt?: Date | string
     email: string
     name?: string | null
+    stripeCustomerID?: string | null
   }
 
   export type UserUpdateManyMutationInput = {
     externalID?: StringFieldUpdateOperationsInput | string
     attributes?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    stripeCustomerID?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type UserUncheckedUpdateManyInput = {
@@ -2166,8 +2216,10 @@ export namespace Prisma {
     externalID?: StringFieldUpdateOperationsInput | string
     attributes?: JsonNullValueInput | InputJsonValue
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     email?: StringFieldUpdateOperationsInput | string
     name?: NullableStringFieldUpdateOperationsInput | string | null
+    stripeCustomerID?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2255,8 +2307,10 @@ export namespace Prisma {
     externalID?: SortOrder
     attributes?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    stripeCustomerID?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
@@ -2267,16 +2321,20 @@ export namespace Prisma {
     id?: SortOrder
     externalID?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    stripeCustomerID?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
     id?: SortOrder
     externalID?: SortOrder
     createdAt?: SortOrder
+    updatedAt?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    stripeCustomerID?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {

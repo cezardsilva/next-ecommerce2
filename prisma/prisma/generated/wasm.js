@@ -125,8 +125,10 @@ exports.Prisma.UserScalarFieldEnum = {
   externalID: 'externalID',
   attributes: 'attributes',
   createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
   email: 'email',
-  name: 'name'
+  name: 'name',
+  stripeCustomerID: 'stripeCustomerID'
 };
 
 exports.Prisma.SortOrder = {
