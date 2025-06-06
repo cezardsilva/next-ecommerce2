@@ -23,6 +23,7 @@ export default function Product({ product }: ProductProps) {
         </div>
 
         <AddCart product={product} />
+        
       </div>
     </Link>
   );

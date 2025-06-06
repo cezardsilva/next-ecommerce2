@@ -38,7 +38,7 @@ export default async function ProductPage({
   params: { id },
 }: ProductPageProps) {
   const product = await getProduct(id);
-
+ 
   if (!product) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
