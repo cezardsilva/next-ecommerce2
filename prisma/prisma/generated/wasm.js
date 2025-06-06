@@ -131,6 +131,25 @@ exports.Prisma.UserScalarFieldEnum = {
   stripeCustomerID: 'stripeCustomerID'
 };
 
+exports.Prisma.OrderScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  amounnt: 'amounnt',
+  currency: 'currency',
+  status: 'status',
+  createdDate: 'createdDate',
+  paymentIntentID: 'paymentIntentID'
+};
+
+exports.Prisma.ProductScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  description: 'description',
+  price: 'price',
+  image: 'image',
+  quantity: 'quantity'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -158,7 +177,9 @@ exports.Prisma.NullsOrder = {
 
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  User: 'User',
+  Order: 'Order',
+  Product: 'Product'
 };
 
 /**
